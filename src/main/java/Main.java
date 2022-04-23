@@ -28,11 +28,17 @@ public class Main {
 
         String oldCode = attributes.getNamedItem("code").getTextContent();
         System.err.println("Old Code " + oldCode);
+
+        String newCode = oldCode.replaceFirst("^1-1000-", "1-2000-");
+
+        if (oldCode.equals(newCode)) {
+            return;
+        }
+
         Attr oldCodeAttr = node.getOwnerDocument().createAttribute("prev-code");
         oldCodeAttr.setTextContent(oldCode);
         attributes.setNamedItem(oldCodeAttr);
 
-        String newCode = oldCode.replaceFirst("^1-1000-", "1-2000-");
         System.err.println("New Code " + newCode);
         attributes.getNamedItem("code").setTextContent(newCode);
     }
