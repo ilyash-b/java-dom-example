@@ -15,7 +15,7 @@ import java.io.InputStream;
 
 public class Main {
 
-    private void update(Node node) {
+    private void updateCodeOfItem(Node node) {
         String category = ((Element) node).getElementsByTagName("category").item(0).getTextContent();
         System.err.println("Category " + category);
 
@@ -50,7 +50,7 @@ public class Main {
             Document doc = documentBuilder.parse(stream);
 
             NodeList items = doc.getElementsByTagName("item");
-            new NodeListIterator(items).forEachRemaining(this::update);
+            new NodeListIterator(items).forEachRemaining(this::updateCodeOfItem);
 
             // Based on https://docs.oracle.com/javase/tutorial/jaxp/xslt/writingDom.html
             TransformerFactory factory = TransformerFactory.newInstance();
