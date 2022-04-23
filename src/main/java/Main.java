@@ -53,8 +53,8 @@ public class Main {
             new NodeListIterator(items).forEachRemaining(this::updateCodeOfItem);
 
             // Based on https://docs.oracle.com/javase/tutorial/jaxp/xslt/writingDom.html
-            TransformerFactory factory = TransformerFactory.newInstance();
-            Transformer transformer = factory.newTransformer();
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
             transformer.transform(new DOMSource(doc), new StreamResult(System.out));
         }
     }
