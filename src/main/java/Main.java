@@ -32,7 +32,7 @@ public class Main {
         oldCodeAttr.setTextContent(oldCode);
         attributes.setNamedItem(oldCodeAttr);
 
-        String newCode = oldCode.replaceFirst("1-1000-", "1-2000-");
+        String newCode = oldCode.replaceFirst("^1-1000-", "1-2000-");
         System.err.println("New Code " + newCode);
         attributes.getNamedItem("code").setTextContent(newCode);
     }
