@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<bill>
+
+    <item code="1-1000-120">
+        <category>health</category>
+        <name>Orange Juice</name>
+        <price>3.00</price>
+    </item>
+
+    <item code="1-1000-120">
+        <category>health</category>
+        <name>Water</name>
+        <price>2.20</price>
+    </item>
+
+    <item code="1-1000-832">
+        <category>fun</category>
+        <name>Coffee</name>
+        <price>5.50</price>
+    </item>
+
+</bill>
